@@ -106,7 +106,29 @@ const products = [
   { product: "tea", price: "" },
 ];
 console.log("Exercise 1");
+/*Iterate over the products array, logging each product name. */
 
 console.log(products.map((item) => item["product"]));
 
 console.log("Exercise 2");
+/*Filter out products with names longer than 5 characters. */
+
+console.log(
+  products
+    .filter((item) => item["product"].length > 5)
+    .map((item) => item["product"])
+);
+
+/*Filter out products without prices, convert string prices 
+to numbers, and calculate the total price using `reduce`. */
+console.log(
+  products
+    .filter((item) => item["price"].toString().trim() !== "")
+    .map((item) => parseInt(item["price"]))
+    .reduce((acc, price) => {
+      acc += price;
+      return acc;
+    }, 0)
+);
+
+
