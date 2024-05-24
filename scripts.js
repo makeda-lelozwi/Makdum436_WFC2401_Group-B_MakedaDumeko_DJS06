@@ -19,17 +19,9 @@ const names = [
 ];
 
 // A list of products with prices:
-const products = [
-  { product: "banana", price: "2" },
-  { product: "mango", price: 6 },
-  { product: "potato", price: " " },
-  { product: "avocado", price: "8" },
-  { product: "coffee", price: 10 },
-  { product: "tea", price: "" },
-];
 
 //EXERCISES
-
+console.log("Exercises");
 /*Use `forEach` to log each name and each province to the 
 console. Then, log each name with a matching province in the 
 format "Name (Province)". */
@@ -101,3 +93,20 @@ const combinedObject = names.reduce((acc, name, index) => {
 }, {});
 
 console.log(combinedObject);
+
+/*ADVANCED EXERCISES */
+console.log("Advanced exercises");
+
+const products = [
+  { product: "banana", price: "2" },
+  { product: "mango", price: 6 },
+  { product: "potato", price: " " },
+  { product: "avocado", price: "8" },
+  { product: "coffee", price: 10 },
+  { product: "tea", price: "" },
+];
+console.log("Exercise 1");
+
+console.log(products.map((item) => item["product"]));
+
+console.log("Exercise 2");
