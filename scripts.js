@@ -20,6 +20,14 @@ const names = [
 
 // A list of products with prices:
 
+const products = [
+  { product: "banana", price: "2" },
+  { product: "mango", price: 6 },
+  { product: "potato", price: " " },
+  { product: "avocado", price: "8" },
+  { product: "coffee", price: 10 },
+  { product: "tea", price: "" },
+];
 //EXERCISES
 console.log("Exercises");
 /*Use `forEach` to log each name and each province to the 
@@ -97,14 +105,6 @@ console.log(combinedObject);
 /*ADVANCED EXERCISES */
 console.log("Advanced exercises");
 
-const products = [
-  { product: "banana", price: "2" },
-  { product: "mango", price: 6 },
-  { product: "potato", price: " " },
-  { product: "avocado", price: "8" },
-  { product: "coffee", price: 10 },
-  { product: "tea", price: "" },
-];
 console.log("Exercise 1");
 /*Iterate over the products array, logging each product name. */
 
@@ -159,4 +159,19 @@ products
 
 console.log(`Highest: ${maxPrices}. Lowest: ${minPrices}`);
 
+/*Using `Object.entries` and `reduce`, recreate the 
+products object with keys 'name' and 'cost', 
+maintaining their original values. */
+console.log("Exercise 6");
 
+let arr = [];
+products.forEach((item) => {
+  arr.push(
+    ...Object.entries(item).reduce((acc, item1) => {
+      acc["name"] = item1["product"];
+      acc["cost"] = item1["price"];
+      return acc;
+    }, {})
+  );
+});
+console.log(arr);
