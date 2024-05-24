@@ -144,4 +144,19 @@ console.log(
     }, "")
 );
 
+/*Identify the highest and lowest-priced items, 
+returning a string formatted as "Highest: X. Lowest: Y."*/
+console.log("Exercise 5");
+let minPrices = Number.POSITIVE_INFINITY;
+let maxPrices = Number.NEGATIVE_INFINITY;
+products
+  .filter((item) => item["price"].toString().trim() !== "")
+  .forEach((item) => {
+    const priceToInt = parseInt(item["price"]);
+    minPrices = priceToInt <= minPrices ? priceToInt : minPrices;
+    maxPrices = priceToInt >= maxPrices ? priceToInt : maxPrices;
+  });
+
+console.log(`Highest: ${maxPrices}. Lowest: ${minPrices}`);
+
 
