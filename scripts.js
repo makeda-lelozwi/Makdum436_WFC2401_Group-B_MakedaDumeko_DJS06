@@ -121,6 +121,7 @@ console.log(
 
 /*Filter out products without prices, convert string prices 
 to numbers, and calculate the total price using `reduce`. */
+console.log("Exercise 3");
 console.log(
   products
     .filter((item) => item["price"].toString().trim() !== "")
@@ -129,6 +130,18 @@ console.log(
       acc += price;
       return acc;
     }, 0)
+);
+
+/*Use `reduce` to concatenate all product names into a single string. */
+console.log("Exercise 4");
+
+console.log(
+  products
+    .map((item) => item["product"])
+    .reduce((acc, product) => {
+      acc += product;
+      return acc;
+    }, "")
 );
 
 
