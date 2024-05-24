@@ -33,7 +33,7 @@ const products = [
 /*Use `forEach` to log each name and each province to the 
 console. Then, log each name with a matching province in the 
 format "Name (Province)". */
-
+console.log("Exercise 1");
 names.forEach((name) => console.log(name));
 
 function matchNamesWithProv() {
@@ -44,4 +44,34 @@ function matchNamesWithProv() {
 
 matchNamesWithProv();
 
+/*Use `map` to create a new array of province names in all uppercase.
+ Log the new array to the console. */
 
+console.log("Exercise 2");
+const provUpperCase = provinces.map((province) => province.toUpperCase());
+
+console.log(provUpperCase);
+
+/*Create a new array using `map` that 
+contains the length of each name. */
+
+console.log("Exercise 3");
+
+const numberOfCharacters = names.map((name) => name.length);
+
+console.log(numberOfCharacters);
+
+/*Use `sort` to alphabetically sort the provinces */
+console.log("Exercise 4");
+
+const sortedProvinces = provinces.sort();
+
+console.log(sortedProvinces);
+
+/*Use `filter` to remove provinces containing "Cape". 
+Log the count of remaining provinces. */
+console.log("Exercise 5");
+
+const noCape = provinces.filter((province) => !province.includes("Cape"));
+
+console.log(noCape.length);
