@@ -82,11 +82,22 @@ to determine if a name contains the letter 'S'. */
 console.log("Exercise 6");
 
 const containsSArray = names.map((name) =>
-  name.toLowerCase().split("").some((character) => character === 's'
- ));
+  name
+    .toLowerCase()
+    .split("")
+    .some((character) => character === "s")
+);
 
- console.log(containsSArray);
+console.log(containsSArray);
 
-/* */
+/*Use `reduce` to transform the names array into an 
+object mapping names to their respective provinces. */
 
+console.log("Exercise 7");
 
+const combinedObject = names.reduce((acc, name, index) => {
+  acc[name] = provinces[index];
+  return acc;
+}, {});
+
+console.log(combinedObject);
