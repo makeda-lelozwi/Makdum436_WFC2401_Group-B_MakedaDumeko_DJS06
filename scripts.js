@@ -75,3 +75,18 @@ console.log("Exercise 5");
 const noCape = provinces.filter((province) => !province.includes("Cape"));
 
 console.log(noCape.length);
+
+/*Create a boolean array using `map` and `some` 
+to determine if a name contains the letter 'S'. */
+
+console.log("Exercise 6");
+
+const containsSArray = names.map((name) =>
+  name.toLowerCase().split("").some((character) => character === 's'
+ ));
+
+ console.log(containsSArray);
+
+/* */
+
+
