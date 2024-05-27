@@ -2,13 +2,9 @@
 
 #### Objective
 
-This project is designed to challenge and deepen your understanding of JavaScript's powerful array methods. You'll manipulate data using `forEach`, `map`, `filter`, `reduce`, and more, to perform a variety of tasks. This exercise will test your ability to apply these methods in combination to solve complex problems and achieve desired outcomes.
+In this challenge, I was tasked with manipulating data using `forEach`, `map`, `filter`, `reduce`, and more, to perform a variety of tasks. 
 
-The essence of using these higher-order functions is to encourage a declarative approach to programming: you define what you want to achieve (e.g., filter a list, transform data) without having to specify how to perform the operations step-by-step (as you would with imperative loops like for or while). This leads to more readable, concise, and often more maintainable code. Additionally, these functions can help avoid side effects and create pure functions, both key aspects of functional programming.
-
-#### Data Sets
-
-You will work with two primary datasets:
+#### Given Data Sets
 
 1. A list of provinces:
 
@@ -70,15 +66,7 @@ For these exercises, wrap your logic in a single `console.log` statement:
 5. **Find Extremes in Prices**: Identify the highest and lowest-priced items, returning a string formatted as "Highest: X. Lowest: Y."
 6. **Object Transformation**: Using `Object.entries` and `reduce`, recreate the products object with keys 'name' and 'cost', maintaining their original values.
 
-#### Submission Guidelines
+### Exercise Approach
 
-- Submit the completed JavaScript file(s) containing your solutions.
-- Include comments to explain the logic behind your implementations, especially for the advanced exercises.
-- Prepare to discuss your approach, focusing on the "why" and "how" of your solutions during your assessment with a coach.
 
-#### Evaluation Criteria
 
-- Correct application of JavaScript array methods to solve the given problems.
-- Ability to combine multiple array methods to manipulate and transform data effectively.
-- Code readability and efficiency.
-- Thoughtful commentary and explanation of your solution approach and decision-making process.

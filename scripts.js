@@ -84,7 +84,7 @@ console.log("Exercise 6");
 const containsSArray = names.map((name) =>
   name
     .toLowerCase()
-    .split("")
+    .split("") //turns each 
     .some((character) => character === "s")
 );
 
@@ -167,9 +167,12 @@ console.log("Exercise 6");
 let arr = [];
 products.forEach((item) => {
   arr.push(
-    ...Object.entries(item).reduce((acc, item1) => {
-      acc["name"] = item1["product"];
-      acc["cost"] = item1["price"];
+    Object.entries(item).reduce((acc, [key, value]) => {
+      if (key === "product") {
+        acc["name"] = value;
+      } else if (key === "price") {
+        acc["cost"] = value;
+      }
       return acc;
     }, {})
   );
